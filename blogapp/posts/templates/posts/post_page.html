@@ -1,0 +1,26 @@
+{% extends "layout.html" %} 
+
+{% block title %} 
+    {{ post.title }}
+{% endblock %}
+
+
+
+{% block content %}
+<section>
+        <article class="post">
+            <h1>
+                {{ post.title }}
+            </h1>
+            <p>{{ post.date }} by {{ post.author }}</p>
+            <img 
+                class="banner"
+                src="{{ post.banner.url }}" 
+                alt="{{ post.title }}"
+            />
+            <p>{{ post.body }}</p>
+        </article>
+</section>
+
+<p><a href="/posts">Back To Posts</a></p>
+{% endblock %}
